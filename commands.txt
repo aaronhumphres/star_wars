@@ -1,0 +1,320 @@
+➜  /Users cd aaronhumphres
+➜  ~ ls
+Applications Desktop      Documents    Downloads    Library      Movies       Music        Pictures     Public       myfolder     sei
+➜  ~ cd sei
+➜  sei ls
+challenges   deliverables diagnostics  practices    projects     studies      tmp          trainings
+➜  sei cd deliverables
+➜  deliverables ls
+app1              app2              app3              app4              app5              hw1-unix-commands
+➜  deliverables cd hw1-unix-commands 
+➜  hw1-unix-commands ls
+star_wars
+➜  hw1-unix-commands cd star_wars 
+➜  star_wars ls
+commands.txt        death_star          galaxy_far_far_away
+➜  star_wars cd death_star 
+➜  death_star pwd
+/Users/aaronhumphres/sei/deliverables/hw1-unix-commands/star_wars/death_star
+➜  death_star ls
+darth_vader.txt   princess_leia.txt storm_trooper.txt
+➜  death_star cp storm_trooper.txt tatooine
+➜  death_star cd ..
+➜  star_wars ls
+commands.txt        death_star          galaxy_far_far_away
+➜  star_wars cd galaxy_far_far_away 
+➜  galaxy_far_far_away ls
+tatooine
+➜  galaxy_far_far_away cd tatooine 
+➜  tatooine ls
+luke.txt         millenium_falcon obi.wan.txt
+➜  tatooine ls
+luke.txt         millenium_falcon obi.wan.txt
+➜  tatooine cd ..
+➜  galaxy_far_far_away ls
+tatooine
+➜  galaxy_far_far_away cd ..
+➜  star_wars ls
+commands.txt        death_star          galaxy_far_far_away
+➜  star_wars cd death_star 
+➜  death_star ls
+darth_vader.txt   princess_leia.txt storm_trooper.txt tatooine
+➜  death_star cp storm_trooper.txt galaxy_far_far_away/tatooine
+cp: galaxy_far_far_away/tatooine: No such file or directory
+➜  death_star ls
+darth_vader.txt   princess_leia.txt storm_trooper.txt tatooine
+➜  death_star rm tatooine
+➜  death_star ls
+darth_vader.txt   princess_leia.txt storm_trooper.txt
+➜  death_star cp man
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-aclpsvXx] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-aclpsvXx] source_file ... target_directory
+➜  death_star cp storm_trooper.txt ... tatooine
+cp: tatooine is not a directory
+➜  death_star mv man
+usage: mv [-f | -i | -n] [-hv] source target
+       mv [-f | -i | -n] [-v] source ... directory
+➜  death_star cp storm_trooper.txt ../tatooine
+➜  death_star ls
+darth_vader.txt   princess_leia.txt storm_trooper.txt
+➜  death_star ..
+➜  star_wars ls
+commands.txt        death_star          galaxy_far_far_away tatooine
+➜  star_wars rm tatooine
+➜  star_wars ls
+commands.txt        death_star          galaxy_far_far_away
+➜  star_wars cd death_star 
+➜  death_star ls
+darth_vader.txt   princess_leia.txt storm_trooper.txt
+➜  death_star cp ..star_wars/tatooine
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-aclpsvXx] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-aclpsvXx] source_file ... target_directory
+➜  death_star cp ../star_wars/tatooine
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-aclpsvXx] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-aclpsvXx] source_file ... target_directory
+➜  death_star cp ../star_wars/galaxy_far_far_away/tatooine
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-aclpsvXx] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-aclpsvXx] source_file ... target_directory
+➜  death_star cp ../galaxy_far_far_away/tatooine
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-aclpsvXx] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-aclpsvXx] source_file ... target_directory
+➜  death_star cp ../star_wars/galaxy_far_far_away/tatooine/
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-aclpsvXx] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-aclpsvXx] source_file ... target_directory
+➜  death_star cp storm_trooper.txt ../star_wars/galaxy_far_far_away/tatooine
+cp: ../star_wars/galaxy_far_far_away/tatooine: No such file or directory
+➜  death_star ls
+darth_vader.txt   princess_leia.txt storm_trooper.txt
+➜  death_star cp storm_trooper.txt ../galaxy_far_far_away/tatooine
+➜  death_star ls
+darth_vader.txt   princess_leia.txt storm_trooper.txt
+➜  death_star ..
+➜  star_wars cd galaxy_far_far_away 
+➜  galaxy_far_far_away ls
+tatooine
+➜  galaxy_far_far_away cd tatooine 
+➜  tatooine ls
+luke.txt          millenium_falcon  obi.wan.txt       storm_trooper.txt
+➜  tatooine ..
+➜  galaxy_far_far_away ..
+➜  star_wars ls
+commands.txt        death_star          galaxy_far_far_away
+➜  star_wars ..
+➜  hw1-unix-commands ls
+star_wars
+➜  hw1-unix-commands cd star_wars 
+➜  star_wars ls
+commands.txt        death_star          galaxy_far_far_away
+➜  star_wars cd galaxy_far_far_away 
+➜  galaxy_far_far_away ls
+tatooine
+➜  galaxy_far_far_away cd tatooine 
+➜  tatooine ls
+luke.txt          millenium_falcon  obi.wan.txt       storm_trooper.txt
+➜  tatooine cd millenium_falcon 
+➜  millenium_falcon ls
+chewbaca.txt han_solo.txt
+➜  millenium_falcon ..
+➜  tatooine ls
+luke.txt          millenium_falcon  obi.wan.txt       storm_trooper.txt
+➜  tatooine mv luke.txt millenium_falcon 
+➜  tatooine ls
+millenium_falcon  obi.wan.txt       storm_trooper.txt
+➜  tatooine cd millenium_falcon 
+➜  millenium_falcon ls
+chewbaca.txt han_solo.txt luke.txt
+➜  millenium_falcon ..
+➜  tatooine ls
+millenium_falcon  obi.wan.txt       storm_trooper.txt
+➜  tatooine mv obi.wan.txt millenium_falcon 
+➜  tatooine ls
+millenium_falcon  storm_trooper.txt
+➜  tatooine cd millenium_falcon 
+➜  millenium_falcon ls
+chewbaca.txt han_solo.txt luke.txt     obi.wan.txt
+➜  millenium_falcon ..
+➜  tatooine mv millenium_falcon ..
+➜  tatooine ls
+storm_trooper.txt
+➜  tatooine ..
+➜  galaxy_far_far_away ls
+millenium_falcon tatooine
+➜  galaxy_far_far_away ls
+millenium_falcon tatooine
+➜  galaxy_far_far_away mv millenium_falcon ..
+➜  galaxy_far_far_away ls
+tatooine
+➜  galaxy_far_far_away ..
+➜  star_wars ls
+commands.txt        death_star          galaxy_far_far_away millenium_falcon
+➜  star_wars mv millenium_falcon death_star 
+➜  star_wars ls
+commands.txt        death_star          galaxy_far_far_away
+➜  star_wars cd death_star 
+➜  death_star ls
+darth_vader.txt   millenium_falcon  princess_leia.txt storm_trooper.txt
+➜  death_star mv princess_leia.txt millenium_falcon 
+➜  death_star ls
+darth_vader.txt   millenium_falcon  storm_trooper.txt
+➜  death_star cd millenium_falcon 
+➜  millenium_falcon ls
+chewbaca.txt      han_solo.txt      luke.txt          obi.wan.txt       princess_leia.txt
+➜  millenium_falcon rm obi.wan.txt 
+➜  millenium_falcon ls
+chewbaca.txt      han_solo.txt      luke.txt          princess_leia.txt
+➜  millenium_falcon ..
+➜  death_star ..
+➜  star_wars ls
+commands.txt        death_star          galaxy_far_far_away
+➜  star_wars cd galaxy_far_far_away 
+➜  galaxy_far_far_away ls
+tatooine
+➜  galaxy_far_far_away mkdir yavin_4
+➜  galaxy_far_far_away ..
+➜  star_wars ls
+commands.txt        death_star          galaxy_far_far_away
+➜  star_wars cd death_star 
+➜  death_star ls
+darth_vader.txt   millenium_falcon  storm_trooper.txt
+➜  death_star mv millenium_falcon ../galaxy_far_far_away/yavin_4 
+➜  death_star ls
+darth_vader.txt   storm_trooper.txt
+➜  death_star ..
+➜  star_wars ls
+commands.txt        death_star          galaxy_far_far_away
+➜  star_wars cd galaxy_far_far_away 
+➜  galaxy_far_far_away ls
+tatooine yavin_4
+➜  galaxy_far_far_away cd yavin_4 
+➜  yavin_4 ls
+millenium_falcon
+➜  yavin_4 mkdir x_wing
+➜  yavin_4 ls
+millenium_falcon x_wing
+➜  yavin_4 cd millenium_falcon 
+➜  millenium_falcon ls
+chewbaca.txt      han_solo.txt      luke.txt          princess_leia.txt
+➜  millenium_falcon mv princess_leia.txt ..
+➜  millenium_falcon mv luke.txt ../x_wing
+➜  millenium_falcon ls
+chewbaca.txt han_solo.txt
+➜  millenium_falcon ..
+➜  yavin_4 ls
+millenium_falcon  princess_leia.txt x_wing
+➜  yavin_4 cd x_wing 
+➜  x_wing ls
+luke.txt
+➜  x_wing ..
+➜  yavin_4 ls
+millenium_falcon  princess_leia.txt x_wing
+➜  yavin_4 mv millenium_falcon ..
+➜  yavin_4 mv x_wing ..
+➜  yavin_4 ls
+princess_leia.txt
+➜  yavin_4 ..
+➜  galaxy_far_far_away ls
+millenium_falcon tatooine         x_wing           yavin_4
+➜  galaxy_far_far_away ..
+➜  star_wars ls
+commands.txt        death_star          galaxy_far_far_away
+➜  star_wars cd death_star 
+➜  death_star ls
+darth_vader.txt   storm_trooper.txt
+➜  death_star mkdir tie_fighter_1 tie_fighter_2 tie_fighter_3
+➜  death_star ls
+darth_vader.txt   storm_trooper.txt tie_fighter_1     tie_fighter_2     tie_fighter_3
+➜  death_star mv darth_vader.txt tie_fighter_1
+➜  death_star ls
+storm_trooper.txt tie_fighter_1     tie_fighter_2     tie_fighter_3
+➜  death_star cd tie_fighter_1
+➜  tie_fighter_1 ls
+darth_vader.txt
+➜  tie_fighter_1 ..
+➜  death_star ls
+storm_trooper.txt tie_fighter_1     tie_fighter_2     tie_fighter_3
+➜  death_star cp storm_trooper.txt tie_fighter_2 tie_fighter_3
+cp: tie_fighter_2 is a directory (not copied).
+➜  death_star ls
+storm_trooper.txt tie_fighter_1     tie_fighter_2     tie_fighter_3
+➜  death_star cd tie_fighter_2
+➜  tie_fighter_2 ls
+➜  tie_fighter_2 ..
+➜  death_star ls
+storm_trooper.txt tie_fighter_1     tie_fighter_2     tie_fighter_3
+➜  death_star cp storm_trooper.txt tie_fighter_2
+➜  death_star cp storm_trooper.txt tie_fighter_3
+➜  death_star ls
+storm_trooper.txt tie_fighter_1     tie_fighter_2     tie_fighter_3
+➜  death_star cd tie_fighter_2
+➜  tie_fighter_2 ls
+storm_trooper.txt
+➜  tie_fighter_2 ..
+➜  death_star cd tie_fighter_3
+➜  tie_fighter_3 ls
+storm_trooper.txt
+➜  tie_fighter_3 ..
+➜  death_star 
+➜  death_star ls
+storm_trooper.txt tie_fighter_1     tie_fighter_2     tie_fighter_3
+➜  death_star mv tie_fighter_1 ..
+➜  death_star mv tie_fighter_2 ..
+➜  death_star mv tie_fighter_3 ..
+➜  death_star ls
+storm_trooper.txt
+➜  death_star ..
+➜  star_wars ls
+commands.txt        death_star          galaxy_far_far_away tie_fighter_1       tie_fighter_2       tie_fighter_3
+➜  star_wars mv tie_fighter_1 galaxy_far_far_away 
+➜  star_wars mv tie_fighter_2 galaxy_far_far_away 
+➜  star_wars mv tie_fighter_3/3 galaxy_far_far_away 
+mv: rename tie_fighter_3/3 to galaxy_far_far_away/3: No such file or directory
+➜  star_wars mv tie_fighter_3 galaxy_far_far_away 
+➜  star_wars ls
+commands.txt        death_star          galaxy_far_far_away
+➜  star_wars cd gal
+cd: no such file or directory: gal
+➜  star_wars cd galaxy_far_far_away 
+➜  galaxy_far_far_away ls
+millenium_falcon tatooine         tie_fighter_1    tie_fighter_2    tie_fighter_3    x_wing           yavin_4
+➜  galaxy_far_far_away rm tie_fighter_2 tie_fighter_3
+rm: tie_fighter_2: is a directory
+rm: tie_fighter_3: is a directory
+➜  galaxy_far_far_away rm -a tie_fighter_2
+rm: illegal option -- a
+usage: rm [-f | -i] [-dIPRrvWx] file ...
+       unlink [--] file
+➜  galaxy_far_far_away rm -r tie_fighter_2
+➜  galaxy_far_far_away rm -r tie_fighter_3
+➜  galaxy_far_far_away ls
+millenium_falcon tatooine         tie_fighter_1    x_wing           yavin_4
+➜  galaxy_far_far_away cd x_wing 
+➜  x_wing ls
+luke.txt
+➜  x_wing touch the_force.txt
+➜  x_wing ls
+luke.txt      the_force.txt
+➜  x_wing ..
+➜  galaxy_far_far_away ..
+➜  star_wars ls
+commands.txt        death_star          galaxy_far_far_away
+➜  star_wars rm -r death_star 
+➜  star_wars ls
+commands.txt        galaxy_far_far_away
+➜  star_wars cd galaxy_far_far_away 
+➜  galaxy_far_far_away ls
+millenium_falcon tatooine         tie_fighter_1    x_wing           yavin_4
+➜  galaxy_far_far_away mv x_wing yavin_4 
+➜  galaxy_far_far_away mv millenium_falcon yavin_4 
+➜  galaxy_far_far_away ls
+tatooine      tie_fighter_1 yavin_4
+➜  galaxy_far_far_away cd yavin_4 
+➜  yavin_4 ls
+millenium_falcon  princess_leia.txt x_wing
+➜  yavin_4 $ git add -A
+zsh: command not found: $
+➜  yavin_4 ..
+➜  galaxy_far_far_away ..
+➜  star_wars ls
+commands.txt        galaxy_far_far_away
+➜  star_wars code commands.txt
+➜  star_wars
